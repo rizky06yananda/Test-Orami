@@ -23,3 +23,69 @@ If you discover a security vulnerability within Lumen, please send an e-mail to 
 
 The Lumen framework is open-sourced software licensed under the [MIT license](https://opensource.org/licenses/MIT).
 # Test-Orami
+cara jalankan project
+1. ganti .env.example ke .env
+2. ganti config .env dengan
+    APP_NAME=Lumen
+    APP_ENV=local
+    APP_KEY=iBVIQ537SBVSdufpLT9CmVcqpmjGL80z
+    APP_DEBUG=true
+    APP_URL=http://localhost
+    APP_TIMEZONE=UTC
+
+    LOG_CHANNEL=stack
+    LOG_SLACK_WEBHOOK_URL=
+
+    DB_CONNECTION=mysql
+    DB_HOST=127.0.0.1
+    DB_PORT=3306
+    DB_DATABASE=db_test_orami
+    DB_USERNAME=root
+    DB_PASSWORD=
+
+    CACHE_DRIVER=file
+    QUEUE_CONNECTION=sync
+3. jalankan perintah php artisan migrate
+4. jalankan perintah php artisan db:seed atau dengan php artisan db:seed --class=ProduckSeeder dan php artisan db:seed --class=StockSeeder dan php artisan db:seed --class=LocationSeeder
+5. jalankan perintah php artisan serve
+6. buka url berikut  di postman atau web browser http://127.0.0.1:8000/test
+
+# Result
+
+{
+    "result": [
+        {
+            "produckName": "Product 1000",
+            "stock": {
+                "total": 29,
+                "detail": [
+                    {
+                        "locationName": "Location 1",
+                        "stock": 21
+                    },
+                    {
+                        "locationName": "Location 2",
+                        "stock": 8
+                    }
+                ]
+            }
+        },
+        {
+            "produckName": "Product 1001",
+            "stock": {
+                "total": 14,
+                "detail": [
+                    {
+                        "locationName": "Location 1",
+                        "stock": 4
+                    },
+                    {
+                        "locationName": "Location 2",
+                        "stock": 10
+                    }
+                ]
+            }
+        }
+    ]
+}
+
