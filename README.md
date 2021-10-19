@@ -49,6 +49,7 @@ cara jalankan project
 4. jalankan perintah php artisan db:seed atau dengan php artisan db:seed --class=ProduckSeeder dan php artisan db:seed --class=StockSeeder dan php artisan db:seed --class=LocationSeeder
 5. jalankan perintah php artisan serve
 6. buka url berikut  di postman atau web browser http://127.0.0.1:8000/test
+7. bisa akses link berikut untuk test postman https://www.getpostman.com/collections/2e59fa0d9a31007dc6a2
 
 # Result
 
